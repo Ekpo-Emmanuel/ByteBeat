@@ -1,8 +1,19 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link, useLocation } from 'react-router-dom';
 
 
 const Navbar = () => {
+    const location = useLocation();
+    const currentPage = location.pathname;
+
+    const links = [
+        { name: "Home", link: "/" },
+        { name: "About", link: "/about" },
+        { name: "Elements", link: "/elements" },
+        { name: "Archive", link: "/contact" }
+    ];
+
   return (
     <div>
         <div className="header-height-fix" />
@@ -11,10 +22,9 @@ const Navbar = () => {
             <div className="row">
             <div className="col-12">
                 <nav className="navbar navbar-expand-lg navbar-light p-0">
-                {/* logo */}
-                <a className="navbar-brand font-weight-bold mb-0" href="index.html" title="Qurno">
+                <Link className="navbar-brand font-weight-bold mb-0" to="/" title="Qurno">
                     <img className="img-fluid" width={110} height={35} src="assets/images/logo.png" alt="Qurno" />
-                </a>
+                </Link>
                 <button className="search-toggle d-inline-block d-lg-none ms-auto me-1 me-sm-3" data-toggle="search" aria-label="Search Toggle">
                     <span>Search</span>
                     <svg width={22} height={22} strokeWidth="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 15.5L19 19" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" /><path d="M5 11C5 14.3137 7.68629 17 11 17C12.6597 17 14.1621 16.3261 15.2483 15.237C16.3308 14.1517 17 12.654 17 11C17 7.68629 14.3137 5 11 5C7.68629 5 5 7.68629 5 11Z" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" /></svg>
@@ -25,32 +35,27 @@ const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navHeader">
                     <ul className="navbar-nav mx-auto">
-                    <li className="nav-item @@home">
-                        <a className="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li className="nav-item @@about">
-                        <a className="nav-link" href="about.html">About</a>
-                    </li>
-                    <li className="nav-item @@elements">
-                        <a className="nav-link" href="elements.html">Elements</a>
-                    </li>
-                    <li className="nav-item active">
-                        <a className="nav-link" href="archive.html">Archive</a>
-                    </li>
-                    <li className="nav-item @@contact">
-                        <a className="nav-link" href="contact.html">Contact</a>
-                    </li>
+                        {links.map((link, index) => (
+                            <li 
+                                key={index} 
+                                className={`nav-item ${currentPage.toLowerCase() === link.link.toLowerCase() 
+                                    ? 'active' 
+                                    : `@@${link.name.toLowerCase()}`}`}
+                            >
+                                <Link className="nav-link" to={link.link}>{link.name}</Link>
+                            </li>
+                        ))}
                     <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+                        <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</Link>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a className="dropdown-item" href="author.html">Author</a></li>
-                        <li><a className="dropdown-item" href="author-single.html">Author Single</a></li>
-                        <li><a className="dropdown-item" href="tags.html">Tags</a></li>
-                        <li><a className="dropdown-item" href="tag-single.html">Tag Single</a></li>
-                        <li><a className="dropdown-item" href="categories.html">Categories</a></li>
-                        <li><a className="dropdown-item" href="categories-single.html">Category Single</a></li>
-                        <li><a className="dropdown-item" href="404-page.html">404 Page</a></li>
-                        <li><a className="dropdown-item" href="privacy.html">Privacy</a></li>
+                        <li><Link className="dropdown-item" to="/author.html">Author</Link></li>
+                        <li><Link className="dropdown-item" to="/author-single.html">Author Single</Link></li>
+                        <li><Link className="dropdown-item" to="/tags.html">Tags</Link></li>
+                        <li><Link className="dropdown-item" to="/tag-single.html">Tag Single</Link></li>
+                        <li><Link className="dropdown-item" to="/categories.html">Categories</Link></li>
+                        <li><Link className="dropdown-item" to="/categories-single.html">Category Single</Link></li>
+                        <li><Link className="dropdown-item" to="/404-page.html">404 Page</Link></li>
+                        <li><Link className="dropdown-item" to="/privacy.html">Privacy</Link></li>
                         </ul>
                     </li>
                     </ul>
@@ -79,22 +84,22 @@ const Navbar = () => {
             <p className="h4 mb-3">See posts by tags</p>
             <ul className="card-meta-tag list-inline">
             <li className="list-inline-item me-1 mb-2">
-                <a className="small" href="tag-single.html">Life</a>
+                <Link className="small" to="tag-single.html">Life</Link>
             </li>
             <li className="list-inline-item me-1 mb-2">
-                <a className="small" href="tag-single.html">Lifestyle</a>
+                <Link className="small" to="tag-single.html">Lifestyle</Link>
             </li>
             <li className="list-inline-item me-1 mb-2">
-                <a className="small" href="tag-single.html">Lighting</a>
+                <Link className="small" to="tag-single.html">Lighting</Link>
             </li>
             <li className="list-inline-item me-1 mb-2">
-                <a className="small" href="tag-single.html">Machine</a>
+                <Link className="small" to="tag-single.html">Machine</Link>
             </li>
             <li className="list-inline-item me-1 mb-2">
-                <a className="small" href="tag-single.html">Startups</a>
+                <Link className="small" to="tag-single.html">Startups</Link>
             </li>
             <li className="list-inline-item me-1 mb-2">
-                <a className="small" href="tag-single.html">Work</a>
+                <Link className="small" to="tag-single.html">Work</Link>
             </li>
             </ul>
         </div>
@@ -102,13 +107,13 @@ const Navbar = () => {
             <p className="h4 mb-3">See posts by categories</p>
             <ul className="card-meta-tag list-inline">
             <li className="list-inline-item me-1 mb-2">
-                <a className="small" href="categorie-single.html">AI</a>
+                <Link className="small" to="categorie-single.html">AI</Link>
             </li>
             <li className="list-inline-item me-1 mb-2">
-                <a className="small" href="categorie-single.html">Earth</a>
+                <Link className="small" to="categorie-single.html">Earth</Link>
             </li>
             <li className="list-inline-item me-1 mb-2">
-                <a className="small" href="categorie-single.html">Tech</a>
+                <Link className="small" to="categorie-single.html">Tech</Link>
             </li>
             </ul>
         </div>

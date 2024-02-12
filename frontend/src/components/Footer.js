@@ -1,0 +1,46 @@
+import React from 'react'
+import { UserPlus } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const Footer = () => {
+  return (
+    <footer>
+        <div className="container">
+          <div className="section">
+            <div className="row justify-content-center align-items-center">
+              <div className="col-xl-6 col-lg-8 col-md-10">
+                {/* newsletter block */}
+                <div className="newsletter-block">
+                  <h2 className="section-title text-center mb-4">Get latest posts delivered right to your inbox</h2>
+                  <form action="#!" method="post" noValidate>
+                    <div className="input-group flex-column flex-sm-row flex-nowrap flex-sm-nowrap">
+                      <input type="email" name="email" className="form-control required email w-auto text-center text-sm-start" placeholder="Your email address" aria-label="Subscription" required />
+                      <div className="input-group-append d-flex d-sm-inline-block mt-2 mt-sm-0 ms-0 w-auto">
+                        <button type="submit" name="subscribe" id="mc-embedded-subscribe" className="input-group-text w-100 justify-content-center align-items-center gap-2" aria-label="Subscription Button"><UserPlus size={16} strokeWidth={1.5} /> Join today</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                {/* newsletter block */}
+              </div>
+            </div>
+          </div>
+          <div className="pb-5">
+            <div className="row g-2 g-lg-4 align-items-center">
+              <div className="col-lg-6 text-center text-lg-start">
+                <p className="mb-0 copyright-text content">©2022 Qurno. All rights reserved.</p>
+              </div>
+              <div className="col-lg-6 text-center text-lg-end">
+                <ul className="list-inline footer-menu">
+                  {/* <li className="list-inline-item m-0"><Link href="/">Privacy Policy</Link></li> */}
+                  {/* <li className="list-inline-item m-0"><Link href="/">404 Page</Link></li> */}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+  )
+}
+
+export default Footer

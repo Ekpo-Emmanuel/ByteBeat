@@ -20,8 +20,8 @@ const Footer = () => {
               </div>
               <div className="col-lg-6 text-center text-lg-end">
                 <ul className="list-inline footer-menu">
-                  <li className="list-inline-item m-0"><Link href="/">Privacy Policy</Link></li>
-                  <li className="list-inline-item m-0"><Link href="/">404 Page</Link></li>
+                  <li className="list-inline-item m-0"><Link to="https://emmanuel-ekpo.vercel.app/" target='_blank' className='href'>My Portfolio</Link></li>
+                  <li className="list-inline-item m-0"><Link to="/404page" className='href'>404 Page</Link></li>
                 </ul>
               </div>
             </div>

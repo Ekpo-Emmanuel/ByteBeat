@@ -1,3 +1,8 @@
+.over-all {
+    background-color: #FFF6EF;
+}
+
+
 
 .h1,h1{
     font-size:64px;
@@ -62,15 +67,15 @@
     font-family:"Crete Round",serif;
     color:#152035
 }
-a:focus,button:focus{
+.href:focus,button:focus{
     outline:0
 }
-a{
+.href{
     color:#000;
     transition:all .3s;
     text-decoration:none
 }
-a:hover{
+.href:hover{
     color:#000
 }
 li,ul{
@@ -201,16 +206,16 @@ p{
     transform:translateY(1px);
     display:inline-block
 }
-.social-links a{
+.social-links .href{
     font-size:18px;
     padding:7px;
     color:rgba(0,0,0,.8);
     display:inline-block
 }
-.social-links a:hover{
+.social-links .href:hover{
     color:#f08e80
 }
-.social-links.icon-box li a{
+.social-links.icon-box li .href{
     height:42px;
     width:42px;
     line-height:42px;
@@ -260,13 +265,13 @@ p{
 .content h1,.content h2,.content h3,.content h4,.content h5,.content h6{
     margin-top:35px
 }
-.content a{
-    text-decoration:underline
+.content .href{
+    text-decoration:none;
 }
-.content a:hover{
+.content .href:hover{
     color:#000
 }
-.content a:not(.btn):hover{
+.content .href:not(.btn):hover{
     opacity:.75
 }
 .content img{
@@ -457,7 +462,7 @@ p{
     display:inline-block;
     margin-top:10px
 }
-.breadcrumb-menu li:last-child a{
+.breadcrumb-menu li:last-child .href{
     opacity:.7;
     pointer-events:none
 }
@@ -503,13 +508,13 @@ button.input-group-text:hover{
 .font-secondary{
     font-family:"Work Sans",sans-serif
 }
-.btn,.card-meta .card-meta-author img,.card.post-card .post-image::before,.content blockquote,.content img,.content pre,.disqus-comment .block,.form-control,.newsletter-block .input-group-text,.post-meta-tag a,.rounded,.search-results::-webkit-scrollbar-thumb,.search-results::-webkit-scrollbar-track,.search-toggle,.social-share li,footer .icon-box a,header .dropdown-item,header .nav-item .nav-link{
+.btn,.card-meta .card-meta-author img,.card.post-card .post-image::before,.content blockquote,.content img,.content pre,.disqus-comment .block,.form-control,.newsletter-block .input-group-text,.post-meta-tag a,.rounded,.search-results::-webkit-scrollbar-thumb,.search-results::-webkit-scrollbar-track,.search-toggle,.social-share li,footer .icon-box .href,header .dropdown-item,header .nav-item .nav-link{
     border-radius:4px!important
 }
 .text-primary{
     color:#f08e80!important
 }
-a.text-primary:hover{
+.href.text-primary:hover{
     color:#eb6552!important
 }
 .bg-primary{
@@ -518,7 +523,7 @@ a.text-primary:hover{
 .text-dark{
     color:#152035
 }
-a.text-dark:hover{
+.href.text-dark:hover{
     color:#f08e80!important
 }
 .bg-light{
@@ -561,17 +566,17 @@ footer .section-title{
 .footer-menu li:last-child::after{
     display:none
 }
-.footer-menu li a{
+.footer-menu li .href{
     color:rgba(21,32,53,.7)
 }
-.footer-menu li a:hover{
+.footer-menu li .href:hover{
     color:#f08e80;
     text-decoration:underline
 }
 .copyright-text{
     color:rgba(21,32,53,.7)
 }
-.copyright-text a{
+.copyright-text .href{
     color:rgba(21,32,53,.7)
 }
 h1.page-not-found-title{
@@ -848,14 +853,14 @@ header .navbar-light .navbar-toggler.toggle-menu .menu-close{
 .search-results::-webkit-scrollbar-thumb:hover{
     background:#a8a8a8
 }
-.search-results a{
+.search-results .href{
     display:block
 }
-.search-results a:hover{
+.search-results .href:hover{
     opacity:.8
 }
 @media (max-width:575px){
-    .search-results a{
+    .search-results .href{
         margin-bottom:15px
     }
     .search-results img{
@@ -915,10 +920,10 @@ header .navbar-light .navbar-toggler.toggle-menu .menu-close{
 .card.post-card .card-body{
     padding:0
 }
-.card.post-card .card-body a:hover{
+.card.post-card .card-body .href:hover{
     color:inherit
 }
-.card.post-card .card-body a:hover .post-title{
+.card.post-card .card-body .href:hover .post-title{
     color:#f08e80
 }
 .card.post-card .post-image{
@@ -982,7 +987,7 @@ header .navbar-light .navbar-toggler.toggle-menu .menu-close{
         font-size:18px
     }
 }
-.card-meta a{
+.card-meta .href{
     color:#505050
 }
 .card-meta .list-inline-item:not(:last-child){
@@ -1015,14 +1020,14 @@ header .navbar-light .navbar-toggler.toggle-menu .menu-close{
 .card-meta .card-meta-tag .list-inline-item:not(:last-child){
     margin-right:.5rem
 }
-.card-meta .card-meta-tag a{
+.card-meta .card-meta-tag .href{
     background-color:rgba(240,142,128,.1);
     color:#505050;
     padding:6px 10px;
     border-radius:2px;
     transition:.15s
 }
-.card-meta .card-meta-tag a:hover{
+.card-meta .card-meta-tag .href:hover{
     background-color:#f08e80;
     color:#fff!important
 }
@@ -1045,14 +1050,14 @@ header .navbar-light .navbar-toggler.toggle-menu .menu-close{
 .disqus-comment,.single-post-author,.single-post-similer{
     margin-top:100px
 }
-.post-meta-tag a{
+.post-meta-tag .href{
     display:inline-block;
     background-color:#f7f8fa;
     color:#505050;
     padding:6px 13px;
     font-size:15px
 }
-.post-meta-tag a:hover{
+.post-meta-tag .href:hover{
     background-color:transparent;
     color:#f08e80
 }
@@ -1092,11 +1097,11 @@ header .navbar-light .navbar-toggler.toggle-menu .menu-close{
     }
 }
 @media (max-width:767px){
-    .archive-block .archive-post-item a{
+    .archive-block .archive-post-item .href{
         display:block
     }
 }
-.archive-block a:hover{
+.archive-block .href:hover{
     text-decoration:underline
 }
 .disqus-comment .block{

@@ -10,8 +10,8 @@ const Navbar = () => {
     const links = [
         { name: "Home", link: "/" },
         { name: "About", link: "/about" },
-        { name: "Elements", link: "/elements" },
-        { name: "Archive", link: "/contact" }
+        // { name: "Elements", link: "/elements" },
+        { name: "Contact", link: "/contact" }
     ];
 
   return (
@@ -23,7 +23,7 @@ const Navbar = () => {
             <div className="col-12">
                 <nav className="navbar navbar-expand-lg navbar-light p-0">
                 <Link className="navbar-brand font-weight-bold mb-0" to="/" title="Qurno">
-                    <img className="img-fluid" width={110} height={35} src="assets/images/logo.png" alt="Qurno" />
+                    <img className="img-fluid" width={110} height={35} src="/assets/images/logo.png" alt="Qurno" />
                 </Link>
                 <button className="search-toggle d-inline-block d-lg-none ms-auto me-1 me-sm-3" data-toggle="search" aria-label="Search Toggle">
                     <span>Search</span>
@@ -45,7 +45,7 @@ const Navbar = () => {
                                 <Link className="nav-link" to={link.link}>{link.name}</Link>
                             </li>
                         ))}
-                    <li className="nav-item dropdown">
+                    {/* <li className="nav-item dropdown">
                         <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</Link>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><Link className="dropdown-item" to="/author.html">Author</Link></li>
@@ -57,7 +57,7 @@ const Navbar = () => {
                         <li><Link className="dropdown-item" to="/404-page.html">404 Page</Link></li>
                         <li><Link className="dropdown-item" to="/privacy.html">Privacy</Link></li>
                         </ul>
-                    </li>
+                    </li> */}
                     </ul>
                     <div className="navbar-right d-none d-lg-inline-block">
                     <ul className="social-links list-unstyled list-inline">

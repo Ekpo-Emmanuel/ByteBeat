@@ -81,10 +81,10 @@ const Hero = () => {
 }
 function Home() {
     return (
-        <>
+        <div className="over-all">
             <Hero />
             <Posts />
-        </>
+        </div>
     );
   }
 

@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import Notfound from './pages/Notfound';
 import Post from './pages/Post';
 import Contact from './pages/Contact';
+import AdminPost from './pages/AdminPost';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/'  element={<Home />}/>
         <Route path='/post/:id'  element={<Post />}/>
         <Route path='/contact'  element={<Contact />}/>
+        <Route path='/backend/post'  element={<AdminPost />}/>
         <Route path='*'  element={<Notfound />}/>
       </Routes>
       <Footer />

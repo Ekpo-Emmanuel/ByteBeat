@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import postList from '../components/blogList'
 import { Link } from 'react-router-dom'
@@ -7,12 +7,27 @@ import RelatedPosts from '../components/RelatedPosts';
 import PostAuthor from '../components/PostAuthor';
 import { LuClock } from "react-icons/lu";
 import { IoIosCalendar } from "react-icons/io";
+import axios from 'axios';
 
 
 
 const Post = () => {
     const { id } = useParams()
-    const post = postList.find(post => post.id === parseInt(id));
+    // const post = postList.find(post => post.id === parseInt(id));
+
+    const [post, setPost] = useState(null);
+
+    useEffect(() => {
+        axios
+          .get(`http://localhost:5000/post/${id}`)
+          .then((response) => {
+            setPost(response.data);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+    }, [id]); 
+
 
   return (
     <div className='over-all'>

@@ -11,7 +11,6 @@ const Navbar = () => {
         { name: "Home", link: "/" },
         { name: "About", link: "/about" },
         // { name: "Elements", link: "/elements" },
-        { name: "Contact", link: "/contact" }
     ];
 
   return (
@@ -62,10 +61,11 @@ const Navbar = () => {
                     <div className="navbar-right d-none d-lg-inline-block">
                     <ul className="social-links list-unstyled list-inline">
                         <li className="list-inline-item ms-4 d-none d-lg-inline-block">
-                        <button className="search-toggle" data-toggle="search" aria-label="Search Toggle">
-                            <span>Search</span>
-                            <svg width={22} height={22} strokeWidth="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 15.5L19 19" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" /><path d="M5 11C5 14.3137 7.68629 17 11 17C12.6597 17 14.1621 16.3261 15.2483 15.237C16.3308 14.1517 17 12.654 17 11C17 7.68629 14.3137 5 11 5C7.68629 5 5 7.68629 5 11Z" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                        </button>
+                        <Link to='/contact'>
+                            <button className="search-toggle" data-toggle="search" aria-label="Search Toggle">
+                                <span>Reach Me</span>
+                            </button>
+                        </Link>
                         </li>
                     </ul>
                     </div>
@@ -75,49 +75,6 @@ const Navbar = () => {
             </div>
         </div>
         </header>
-        <div className="search-block">
-        <div data-toggle="search-close">
-            <span className="ti ti-x text-primary" />
-        </div>
-        <input type="text" id="js-search-input" placeholder="Type to search blog.." aria-label="search-query" />
-        <div className="mt-4 card-meta">
-            <p className="h4 mb-3">See posts by tags</p>
-            <ul className="card-meta-tag list-inline">
-            <li className="list-inline-item me-1 mb-2">
-                <Link className="small" to="tag-single.html">Life</Link>
-            </li>
-            <li className="list-inline-item me-1 mb-2">
-                <Link className="small" to="tag-single.html">Lifestyle</Link>
-            </li>
-            <li className="list-inline-item me-1 mb-2">
-                <Link className="small" to="tag-single.html">Lighting</Link>
-            </li>
-            <li className="list-inline-item me-1 mb-2">
-                <Link className="small" to="tag-single.html">Machine</Link>
-            </li>
-            <li className="list-inline-item me-1 mb-2">
-                <Link className="small" to="tag-single.html">Startups</Link>
-            </li>
-            <li className="list-inline-item me-1 mb-2">
-                <Link className="small" to="tag-single.html">Work</Link>
-            </li>
-            </ul>
-        </div>
-        <div className="mt-4 card-meta">
-            <p className="h4 mb-3">See posts by categories</p>
-            <ul className="card-meta-tag list-inline">
-            <li className="list-inline-item me-1 mb-2">
-                <Link className="small" to="categorie-single.html">AI</Link>
-            </li>
-            <li className="list-inline-item me-1 mb-2">
-                <Link className="small" to="categorie-single.html">Earth</Link>
-            </li>
-            <li className="list-inline-item me-1 mb-2">
-                <Link className="small" to="categorie-single.html">Tech</Link>
-            </li>
-            </ul>
-        </div>
-        </div>
     </div>
   )
 }

@@ -10,6 +10,7 @@ import Notfound from './pages/Notfound';
 import Post from './pages/Post';
 import Contact from './pages/Contact';
 import AdminPost from './pages/AdminPost';
+import About from './pages/About';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path='/'  element={<Home />}/>
         <Route path='/post/:id'  element={<Post />}/>
+        <Route path='/about'  element={<About />}/>
         <Route path='/contact'  element={<Contact />}/>
         <Route path='/backend/post'  element={<AdminPost />}/>
         <Route path='*'  element={<Notfound />}/>

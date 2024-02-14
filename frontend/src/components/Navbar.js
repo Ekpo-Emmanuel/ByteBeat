@@ -60,9 +60,9 @@ const Navbar = () => {
                     </ul>
                     <div className="navbar-right d-none d-lg-inline-block">
                     <ul className="social-links list-unstyled list-inline">
-                        <li className="list-inline-item ms-4 d-none d-lg-inline-block">
+                        <li className="list-inline-item ms-4 d-none d-lg-inline-block"  style={{backgroundColor: '#f08e80', borderRadius: '5px'}}>
                         <Link to='/contact'>
-                            <button className="search-toggle" data-toggle="search" aria-label="Search Toggle">
+                            <button className="search-toggle" data-toggle="search" aria-label="Search Toggle" style={{color: '#fff'}}>
                                 <span>Reach Me</span>
                             </button>
                         </Link>

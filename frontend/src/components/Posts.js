@@ -93,7 +93,7 @@ const Posts = () => {
                   >
                   <img
                       className="w-auto"
-                      src="assets/images/author/thomas-macaulay.jpg"
+                      src="assets/images/author/emma.jpg"
                       alt="Emmanuel Ekpo"
                       width={26}
                       height={26}

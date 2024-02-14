@@ -14,8 +14,8 @@ const About = () => {
                     <div className="col-lg-3 col-md-4 col-sm-5 col-6">
                         <img
                         className="img-fluid rounded"
-                        src="assets/images/author/thomas-macaulay.jpg"
-                        alt="Thomas Macaulay"
+                        src="assets/images/author/emma.jpg"
+                        alt="Emmanuel Ekpo"
                         width={250}
                         height={250}
                         />

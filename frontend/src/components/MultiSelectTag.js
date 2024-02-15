@@ -1,13 +1,32 @@
 import React, { useState } from 'react';
 import { IoClose } from "react-icons/io5";
 
+/**
+ * Function component for a multi-select tag input.
+ *
+ * @param {array} selectedTags - The array of currently selected tags.
+ * @param {function} onChange - The function to be called when the selected tags change.
+ * @return {JSX.Element} The rendered multi-select tag input component.
+ */
+
 const MultiSelectTag = ({ selectedTags, onChange }) => {
     const [inputValue, setInputValue] = useState('');
 
+    /**
+     * Handles the input change event.
+     *
+     * @param {event} event - the input change event
+     * @return {void} 
+     */
     const handleInputChange = (event) => {
       setInputValue(event.target.value);
     };
   
+    /**
+     * Handles key down event for input.
+     *
+     * @param {Event} event - the key down event
+     */
     const handleInputKeyDown = (event) => {
         if (event.key === 'Enter' && inputValue) {
           if (selectedTags.length < 3) {
@@ -18,6 +37,12 @@ const MultiSelectTag = ({ selectedTags, onChange }) => {
         }
       };
   
+    /**
+     * Function to handle the removal of a tag.
+     *
+     * @param {type} tagToRemove - the tag to be removed
+     * @return {type} undefined
+     */
     const handleTagRemove = (tagToRemove) => {
       const newTags = selectedTags.filter(tag => tag !== tagToRemove);
       onChange(newTags);

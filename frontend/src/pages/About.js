@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios';
 
 const About = () => {
+  const [totalPosts, setTotalPosts] = useState(0);
+
+  useEffect(() => {
+    axios.get('http://localhost:5000/')
+      .then(response => {
+        setTotalPosts(response.data.length);
+      })
+      .catch(error => {
+        console.error('Error fetching posts:', error);
+      });
+  }, []);
   return (
     <>
   <section className='over-all'>
@@ -9,39 +21,39 @@ const About = () => {
         <section className="page-header section-sm">
             <div className="container">
                 <div className="row justify-content-center">
-                <div className="col-lg-10">
-                    <div className="row g-4 g-lg-5 text-center text-lg-start justify-content-center justify-content-lg-start">
-                    <div className="col-lg-3 col-md-4 col-sm-5 col-6">
-                        <img
-                        className="img-fluid rounded"
-                        src="assets/images/author/emma.jpg"
-                        alt="Emmanuel Ekpo"
-                        width={250}
-                        height={250}
-                        />
-                    </div>
-                    <div className="col-lg-9 col-md-12">
-                        <p className="mb-2">
-                        <span className="fw-bold text-black">03</span> Published posts
-                        </p>
-                        <h1 className="h3 text-dark mb-3">Emmanuel Ekpo</h1>
-                        <div className="content">
-                        <p>
-                            Emmanuel Ekpo is a Software Engineer based in Vancouver City. He’s
-                            interested in all things tech, science, and photography related,
-                            and likes to yo-yo in his free time.
-                        </p>
-                        <p>
-                            Follow him{" "}
-                            <Link className='href' style={{textDecoration: "underline"}} target="_blank" href="https://twitter.com/thomas-macaulay">
-                            on Twitter
-                            </Link>
-                            .
-                        </p>
+                  <div className="col-lg-10">
+                      <div className="row g-4 g-lg-5 text-center text-lg-start justify-content-center justify-content-lg-start">
+                        <div className="col-lg-3 col-md-4 col-sm-5 col-6">
+                            <img
+                            className="img-fluid rounded"
+                            src="assets/images/author/emma.jpg"
+                            alt="Emmanuel Ekpo"
+                            width={250}
+                            height={250}
+                            />
                         </div>
-                    </div>
-                    </div>
-                </div>
+                        <div className="col-lg-9 col-md-12">
+                            <p className="mb-2">
+                              <span className="fw-bold text-black">{totalPosts}</span> Published posts
+                            </p>
+                            <h1 className="h3 text-dark mb-3">Emmanuel Ekpo</h1>
+                            <div className="content">
+                              <p>
+                                  Emmanuel Ekpo is a Software Engineer based in Vancouver City. He’s
+                                  interested in all things tech, science, and photography related,
+                                  and likes to yo-yo in his free time.
+                              </p>
+                              <p>
+                                  Follow him{" "}
+                                  <Link className='href' style={{textDecoration: "underline"}} target="_blank" href="https://twitter.com/thomas-macaulay">
+                                  on Twitter
+                                  </Link>
+                                  .
+                              </p>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
                 </div>
             </div>
         </section>

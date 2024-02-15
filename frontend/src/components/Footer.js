@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="pb-5">
             <div className="row g-2 g-lg-4 align-items-center">
               <div className="col-lg-6 text-center text-lg-start">
-                <p className="mb-0 copyright-text content">©2022 Qurno. All rights reserved.</p>
+                <p className="mb-0 copyright-text content">Let's connect on <Link to='https://www.linkedin.com/in/emmanuel-ekpo-a2973420b/' target={"_blank"} className='href' style={{textDecoration: "underline"}}>Linkedln</Link></p>
               </div>
               <div className="col-lg-6 text-center text-lg-end">
                 <ul className="list-inline footer-menu">

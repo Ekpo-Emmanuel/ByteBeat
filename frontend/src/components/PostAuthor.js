@@ -11,26 +11,26 @@ const PostAuthor = () => {
                 <Link href="author-single.html">
                 <img
                     className="rounded mr-4"
-                    src="/assets/images/author/thomas-macaulay.jpg"
-                    alt="Thomas Macaulay"
+                    src="/assets/images/author/emma.jpg"
+                    alt="Emmanuel Ekpo"
                     width={155}
                     height={155}
                 />
                 </Link>
                 <div className="ms-0 ms-md-4 ps-0 ps-md-3 mt-4 mt-md-0">
                 <h3 className="h4 mb-3">
-                    <Link className="text-dark" href="author-single.html">
-                    Thomas Macaulay
+                    <Link className="text-dark href" to="/about">
+                    Emmanuel Ekpo
                     </Link>
                 </h3>
                 <p>
-                    Chris Impey is a writer based in New York City. He's interested
+                    I am a writer based in New York City. He's interested
                     in all things tech, science, and photography related, and likes
                     to yo-yo in his free time. …
                 </p>
                 <div className="content">
-                    <Link to="author-single.html" className="href">
-                    See all posts by this author{" "}
+                    <Link to="/about" className="href">
+                    See More{" "}
                     <LuArrowUpRight />
                     </Link>
                 </div>

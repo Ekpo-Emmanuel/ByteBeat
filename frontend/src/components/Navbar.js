@@ -8,8 +8,8 @@ const Navbar = () => {
     const currentPage = location.pathname;
 
     const links = [
-        { name: "Home", link: "/" },
-        { name: "About", link: "/about" },
+        { name: "All Posts", link: "/" },
+        // { name: "About", link: "/about" },
         // { name: "Elements", link: "/elements" },
     ];
 
@@ -22,7 +22,7 @@ const Navbar = () => {
             <div className="col-12">
                 <nav className="navbar navbar-expand-lg navbar-light p-0">
                 <Link className="navbar-brand font-weight-bold mb-0" to="/" title="Qurno">
-                    <img className="img-fluid" width={110} height={35} src="/assets/images/logo.png" alt="Qurno" />
+                    <img className="img-fluid" width={110} height={35} src="/assets/images/bloglogo.png" alt="Qurno" />
                 </Link>
                 <button className="search-toggle d-inline-block d-lg-none ms-auto me-1 me-sm-3" data-toggle="search" aria-label="Search Toggle">
                     <span>Search</span>

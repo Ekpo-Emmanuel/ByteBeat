@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CiClock2 } from "react-icons/ci";
 import { CiCalendar } from "react-icons/ci";
-// import postList from './blogList';
 import axios from 'axios';
 
 const Posts = () => {
@@ -35,13 +34,6 @@ const Posts = () => {
   return (
   <section>
     <div className="container">
-      {/* <div className="row">
-        <div className="col-12 text-center">
-          <h2 className="section-title">
-            <span>Recent</span>
-          </h2>
-        </div>
-      </div> */}
       <div className="row gy-5 gx-4 g-xl-5">
       {loading && <p>Loading...</p>}
       {!loading && postList.length === 0 && <p>No posts available.</p>}

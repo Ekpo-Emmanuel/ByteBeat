@@ -40,13 +40,13 @@ const About = () => {
                             <div className="content">
                               <p>
                                   Emmanuel Ekpo is a Software Engineer based in Vancouver City. He’s
-                                  interested in all things tech, science, and photography related,
-                                  and likes to yo-yo in his free time.
+                                  interested in all things tech, science, and art related,
+                                  and likes to play basketball in his free time.
                               </p>
                               <p>
                                   Follow him{" "}
-                                  <Link className='href' style={{textDecoration: "underline"}} target="_blank" href="https://twitter.com/thomas-macaulay">
-                                  on Twitter
+                                  <Link className='href' style={{textDecoration: "underline"}} target="_blank" href="https://www.linkedin.com/in/emmanuel-ekpo-a2973420b">
+                                  on LinkedIn
                                   </Link>
                                   .
                               </p>
@@ -59,7 +59,7 @@ const About = () => {
         </section>
       <div className="row justify-content-center">
         <div className="col-lg-10 text-center">
-          <div className="content">
+          {/* <div className="content">
             <p>
               If ever a place existed where you could just go crazy creatively,
               it is definitely your about page. It’s your chance to show your
@@ -73,7 +73,7 @@ const About = () => {
               creativity take control, and forget about the technical end of
               things, I’ve got your six.
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

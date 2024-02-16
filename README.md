@@ -82,12 +82,13 @@ BlogBeat is an open-source project, and contributions are welcome! If you'd like
 
 ## Images
 
-![BlogBeat Homepage](/ByteBeat/frontend/public/assets/images/display_images/1.png)
-![BlogBeat Homepage](/ByteBeat/frontend/public/assets/images/display_images/11.png)
-![BlogBeat Homepage](/ByteBeat/frontend/public/assets/images/display_images/3.png)
-![BlogBeat Homepage](/ByteBeat/frontend/public/assets/images/display_images/2.png)
-![BlogBeat Homepage](/ByteBeat/frontend/public/assets/images/display_images/4.png)
-![BlogBeat Homepage](/ByteBeat/frontend/public/assets/images/display_images/22.png)
-![BlogBeat Homepage](/ByteBeat/frontend/public/assets/images/display_images/5.png)
-![BlogBeat Homepage](/ByteBeat/frontend/public/assets/images/display_images/6.png)
+![BlogBeat Homepage](/frontend/public/assets/images/display_images/1.png)
+![BlogBeat Homepage](/frontend/public/assets/images/display_images/11.png)
+![BlogBeat Homepage](/frontend/public/assets/images/display_images/3.png)
+![BlogBeat Homepage](/frontend/public/assets/images/display_images/2.png)
+![BlogBeat Homepage](/frontend/public/assets/images/display_images/4.png)
+![BlogBeat Homepage](/frontend/public/assets/images/display_images/22.png)
+![BlogBeat Homepage](/frontend/public/assets/images/display_images/5.png)
+![BlogBeat Homepage](/frontend/public/assets/images/display_images/6.png)
+
 
